@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../../UI/Button/Button';
+import './UserInput.css';
 
 const UserInput = (props) => {
     const [enteredValue, setEnteredValue] = useState('');
@@ -34,7 +35,7 @@ const UserInput = (props) => {
     
     return (
           <form onSubmit={formSubmitHandler}>
-            <div>
+            <div className='form-control'>
                 <label>Username</label>
                 <input type="text" onChange={nameInputChangeHandler}/> 
                 

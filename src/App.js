@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import UserInput from './components/Users/UserInput/UserInput';
 import UserList from './components/Users/UserList/UserList';
+import './App.css';
 
 function App() {
 
@@ -30,10 +31,10 @@ function App() {
 
   return (
     <div className="App">
-      <section>
+      <section id="goal-form">
       <UserInput onAddUser={addUserHandler}/>
       </section>
-      <section>
+      <section id="goals">
         {content}
       </section>
     </div>
