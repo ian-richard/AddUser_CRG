@@ -1,7 +1,8 @@
+import './UserItem.css';
 
 const UserItem = (props) => {
     return (
-        <li>
+        <li className="user-item">
             {props.children}
         </li>
     ) 
