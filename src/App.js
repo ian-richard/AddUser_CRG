@@ -5,14 +5,14 @@ import UserList from './components/Users/UserList/UserList';
 function App() {
 
   const [Users, setUsers] = useState([
-    {text: 'James', id: 'u1'},
-    {text: 'Diana', id: 'u2'}
+    {text: 'James', age: '30', id: 'u1'},
+    {text: 'Diana', age: '32', id: 'u2'}
   ]);
 
-  const addUserHandler = enteredText => {
+  const addUserHandler = (enteredText, enteredAge) => {
     setUsers(prevUsers => {
       const updatedUsers = [...prevUsers];
-      updatedUsers.unshift({ text: enteredText, id: Math.random().toString() });
+      updatedUsers.unshift({ text: enteredText, age: enteredAge, id: Math.random().toString() });
       return updatedUsers;
     });
   };

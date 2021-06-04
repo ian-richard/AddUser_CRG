@@ -9,6 +9,7 @@ const UserList = props => {
                   id={user.id}
                 >
                     {user.text}
+                    {user.age}
                 </UserItem>
             ))}
         </ul>
