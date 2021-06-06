@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import UserInput from './components/Users/UserInput';
-import UserList from './components/Users/UserList/UserList';
+import UserList from './components/Users/UserList';
 import './App.css';
 
 function App() {
@@ -10,10 +10,10 @@ function App() {
     {text: 'Diana', age: '32', id: 'u2'}
   ]);
 
-  const addUserHandler = (enteredText, enteredAge) => {
+  const addUserHandler = (uName, uAge) => {
     setUsers(prevUsers => {
       const updatedUsers = [...prevUsers];
-      updatedUsers.unshift({ text: enteredText, age: enteredAge, id: Math.random().toString() });
+      updatedUsers.unshift({ text: uName, age: uAge, id: Math.random().toString() });
       return updatedUsers;
     });
   };
