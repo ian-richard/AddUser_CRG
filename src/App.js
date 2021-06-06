@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import UserInput from './components/Users/UserInput';
 import UserList from './components/Users/UserList';
-import './App.css';
+
 
 function App() {
 

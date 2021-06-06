@@ -1,28 +1,22 @@
 import React, { useState } from "react";
-import classes from "./AddUser.module.css";
+
 import Card from "../UI/Card";
 import Button from "../UI/Button";
 import ErrorModal from "../UI/ErrorModal";
-import "./UserInput.css";
+import classes from "./AddUser.module.css";
+
 
 const UserInput = (props) => {
   const [enteredValue, setEnteredValue] = useState("");
   const [enteredAge, setEnteredAge] = useState("");
-  const [isValid, setIsValid] = useState(true);
-  const [isValidAge, setIsValidAge] = useState(true);
+
   const [error, setError] = useState();
 
   const nameInputChangeHandler = (event) => {
-    if (event.target.value.trim().length > 0) {
-      setIsValid(true);
-    }
     setEnteredValue(event.target.value);
   };
 
   const ageInputChangedHandler = (event) => {
-    if (event.target.value.trim().length > 0) {
-      setIsValidAge(true);
-    }
     setEnteredAge(event.target.value);
   };
 
