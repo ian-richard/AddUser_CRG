@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import UserInput from './components/Users/UserInput';
 import UserList from './components/Users/UserList';
 import Card from './components/UI/Card';
@@ -17,7 +17,7 @@ function App() {
   };
 
   let content = (
-    <Card><p> No users found</p></Card>
+    <Card></Card>
   );
 
   if (Users.length > 0){
@@ -26,16 +26,12 @@ function App() {
     );
   }
 
-
+// <> & </> is a shorthand wrapper fragment for React.fragment 
   return (
-    <div className="App">
-      <section id="goal-form">
+    <Fragment>
       <UserInput onAddUser={addUserHandler}/>
-      </section>
-      <section id="goals">
         {content}
-      </section>
-    </div>
+    </Fragment>
   );
 }
 
