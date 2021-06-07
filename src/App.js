@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import UserInput from './components/Users/UserInput';
 import UserList from './components/Users/UserList';
+import Card from './components/UI/Card';
 
 
 function App() {
 
-  const [Users, setUsers] = useState([
-    {text: 'James', age: '30', id: 'u1'},
-    {text: 'Diana', age: '32', id: 'u2'}
-  ]);
+  const [Users, setUsers] = useState([]);
 
   const addUserHandler = (uName, uAge) => {
     setUsers(prevUsers => {
@@ -19,7 +17,7 @@ function App() {
   };
 
   let content = (
-    <p> No users found</p>
+    <Card><p> No users found</p></Card>
   );
 
   if (Users.length > 0){
